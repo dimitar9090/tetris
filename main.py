@@ -3,6 +3,7 @@ import random
 
 pygame.font.init()
 
+
 # GLOBALS VARS
 s_width = 800
 s_height = 700
@@ -262,7 +263,7 @@ def max_score():
 
 
 def draw_window(surface, grid, score=0, last_score = 0):
-    surface.fill((0, 0, 0))
+    surface.fill((151, 67, 169))
 
     pygame.font.init()
     font = pygame.font.SysFont('comicsans', 60)
@@ -281,7 +282,7 @@ def draw_window(surface, grid, score=0, last_score = 0):
     # last score
     label = font.render('High Score: ' + last_score, 1, (255, 255, 255))
 
-    sx = top_left_x - 200
+    sx = top_left_x - 250
     sy = top_left_y + 200
 
     surface.blit(label, (sx + 20, sy + 160))
@@ -383,7 +384,7 @@ def main(win):  # *
 def main_menu(win):  # *
     run = True
     while run:
-        win.fill((0, 0, 0))
+        win.fill((108, 5, 201))
         draw_text_middle(win, 'Press Any Key To Play', 60, (255, 255, 255))
         pygame.display.update()
         for event in pygame.event.get():
